@@ -20,11 +20,11 @@ pipeline {
             } //steps
         } //stage
     } //stages
-    post {
-        always {
-            sh """
-                pip3 uninstall pytest -y
-            """
-        } //always
-    } //post
+//    post {
+//        always {
+//            sh """
+//                sudo pip3 uninstall pytest -y
+//            """
+//        } //always
+//    } //post
 } //pipeline
