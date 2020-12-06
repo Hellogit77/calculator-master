@@ -6,16 +6,16 @@ pipeline {
         stage("Setup script") {
             steps {
                 sh """
-                    yum install -y python36
-                    pip3 install --upgrade pip
-                    pip3 install pytest
+                    sudo yum install -y python36
+                    sudo pip3 install --upgrade pip
+                    sudo pip3 install pytest
                 """
             } //steps
         } //stage
         stage("Run unit tests") {
             steps {
                 sh """
-                    python3 -m pytest
+                    sudo python3 -m pytest
                 """
             } //steps
         } //stage
